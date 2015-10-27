@@ -1,1 +1,1 @@
-git: 'echo' is not a git command. See 'git --help'.
+Memoise is a tool that supports memoized symbolic execution. It uses a trie-based data structure that stores the key elements of a run of symbolic execution. By maintaining the trie, it reuses previously computed results of symbolic execution during successive runs, without the need for re-computing them as is traditionally done. 
