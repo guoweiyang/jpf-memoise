@@ -1,0 +1,25 @@
+target=other.PaperExample
+
+@using=jpf-symbc
+
+classpath = ${jpf-memoise}/build/examples
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method=other.PaperExample.computeValue(sym#sym#sym)
+
+#listener=gov.nasa.jpf.memoization.listener.TrieBuilder
+#listener=gov.nasa.jpf.memoization.listener.DummyListener
+#listener=gov.nasa.jpf.memoization.listener.id.IDListener_c
+#listener=gov.nasa.jpf.memoization.listener.id.IDListener_p
+
+#maxDepth=33
+search.depth_limit=10
+
+trie_name=trie_paper.dat
+trie_to_store=trie_z.dat
+
+#report.console.file=IDResults/report_RJC_BUILD_9.txt
+#report.console.file=IDResults/report_RJC_ID_9_10.txt
+report.console.file=IDResults/report_Reg_10.txt
+
+

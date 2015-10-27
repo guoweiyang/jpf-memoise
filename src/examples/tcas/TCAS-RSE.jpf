@@ -1,0 +1,40 @@
+target = tcas.TCAS
+
+@include=${jpf-symbc}/jpf.properties
+
+classpath = ${jpf-memoise}/build/examples
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method= tcas.TCAS.Non_Crossing_Biased_Climb(),tcas.TCAS.alt_sep_test(),\
+tcas.TCAS.Non_Crossing_Biased_Descend(),tcas.TCAS.Inhibit_Biased_Climb()
+
+peer_packages= gov.nasa.jpf.symbc,${peer_packages}
+
+# replace standard execution with symbolic execution
+
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+
+vm.storage.class=nil
+
+#changedMethod=tcas.TCAS.Own_Below_Threat()Z
+#changedMethod=tcas.TCAS.Inhibit_Biased_Climb()I
+#changedMethod=tcas.TCAS.alt_sep_test()I
+changedMethod=tcas.TCAS.Non_Crossing_Biased_Descend()Z
+changedCFGNode=14
+
+#listener = gov.nasa.jpf.memoization.listener.TrieBuilder
+#listener = gov.nasa.jpf.memoization.listener.rse.RSEListener_IP_p
+listener = gov.nasa.jpf.memoization.listener.rse.RSEListener_IP_c
+#listener = gov.nasa.jpf.memoization.listener.rse.RSEListener_c
+#listener = gov.nasa.jpf.memoization.listener.rse.RSEListener_p
+
+#listener=gov.nasa.jpf.memoization.listener.SolverCallListener
+
+#trie_name=trie_tcas_rse_v0.dat
+#trie_to_store=trie_tcas_rse_v25_c.dat
+#trie_to_store=trie_tcas_rse_v25_p.dat
+
+#report.console.file=RSEResults/report_TCAS_rse_v25_p.txt
+#report.console.file=RSEResults/report_TCAS_rse_v25_c.txt
+#report.console.file=RSEResults/report_TCAS_build_v0.txt
+#report.console.file=RSEResults/report_TCAS_regular_v25.txt

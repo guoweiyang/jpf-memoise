@@ -1,0 +1,12 @@
+target=loop.NestedLoopExample2
+
+classpath = ${jpf-memoise}/build/examples
+
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method= loop.NestedLoopExample2.test(sym#sym#sym)
+
+#listener = gov.nasa.jpf.symbc.SymbolicListener
+
+vm.storage.class=nil
+

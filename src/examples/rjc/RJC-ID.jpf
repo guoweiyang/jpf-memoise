@@ -1,0 +1,26 @@
+target=rjc.RJCMain
+
+@using=jpf-symbc
+
+classpath = ${jpf-memoise}/build/examples
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method=rjc.rjc.MainSymbolic(sym#sym#sym#sym#sym#sym#con#con)
+
+symbolic.dp=coral
+
+#listener=gov.nasa.jpf.memoization.listener.TrieBuilder
+#listener=gov.nasa.jpf.memoization.listener.IDListener
+
+# search.depth_limit=12
+
+memoise.if_compact=false
+
+#memoise.old_trie_name=trie_init.dat
+#memoise.new_trie_name=trie_id.dat
+
+#report.console.file=IDResults/report_RJC_BUILD_11.txt
+#report.console.file=IDResults/report_RJC_ID_11_12_p.txt
+#report.console.file=IDResults/report_RJC_ID_11_12_c.txt
+#report.console.file=IDResults/report_RJC_REGULAR_12.txt
+

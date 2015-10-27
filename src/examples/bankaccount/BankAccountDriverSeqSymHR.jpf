@@ -1,0 +1,36 @@
+target = bankaccount.BankAccountDriverSeqSym
+
+classpath = ${jpf-memoise}/build/examples
+
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method = bankaccount.BankAccount.deposit(sym),bankaccount.BankAccount.withdraw(sym),bankaccount.BankAccountDriverSeqSym.flag(sym)
+
+coverage.include=*.BankAccount
+coverage.show_methods=true
+coverage.show_bodies=true
+
+symbolic.minint=-100
+symbolic.maxint=100
+symbolic.undefined=-1000
+
+#listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#listener = gov.nasa.jpf.memoization.listener.SolverCallListener,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#listener = gov.nasa.jpf.memoization.listener.TrieBuilder,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#listener = gov.nasa.jpf.memoization.listener.HRListener_RC_M,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#listener = gov.nasa.jpf.memoization.listener.HRListener_CT,gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+
+#coverage.show_methods=true
+
+
+search.depth_limit=15
+
+targetMethod=bankaccount.BankAccount.withdraw(I)V
+
+#memoise.old_trie_name=trie_init.dat
+#memoise.new_trie_name=trie_id.dat
+
+#report.console.file=HRResults/report_BANK_hr_reach_35_37.txt
+#report.console.file=HRResults/report_BANK_hr_count_35_37.txt
+#report.console.file=HRResults/report_BANK_hr_reach_build_35.txt
+#report.console.file=HRResults/report_BANK_hr_reach_regular_37.txt

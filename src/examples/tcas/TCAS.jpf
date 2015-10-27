@@ -1,0 +1,17 @@
+target = tcas.TCAS
+
+@include=${jpf-symbc}/jpf.properties
+
+classpath = ${jpf-memoise}/build/examples
+
+symbolic.method= tcas.TCAS.Non_Crossing_Biased_Climb(),tcas.TCAS.alt_sep_test(),\
+tcas.TCAS.Non_Crossing_Biased_Descend(),tcas.TCAS.Inhibit_Biased_Climb()
+
+sourcepath = ${jpf-memoise}/src/examples
+
+
+peer_packages= gov.nasa.jpf.symbc,${peer_packages}
+
+# replace standard execution with symbolic execution
+
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory

@@ -1,0 +1,32 @@
+target=loop.TwoLoopExample
+
+@using=jpf-symbc
+
+classpath = ${jpf-memoise}/build/examples
+
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method=loop.TwoLoopExample.test(sym#sym)
+
+symbolic.dp=choco
+
+#listener = gov.nasa.jpf.symbc.SymbolicListener
+
+vm.storage.class=nil
+
+#listener = gov.nasa.jpf.memoization.listener.TrieBuilder
+#listener = gov.nasa.jpf.memoization.listener.SolverCallListener
+listener = gov.nasa.jpf.memoization.listener.hr.TwoLoopHRListener
+
+#search.depth_limit=125
+search.depth_limit=120
+
+targetCFGNode=7
+#targetCFGNode_2=9
+
+
+trie_name=trie_twoloop_hr_100.dat
+
+#report.console.file=HRResults/report_TWOLOOP_hr_100_120.txt
+#report.console.file=HRResults/report_TWOLOOP_hr_build_100.txt
+#report.console.file=HRResults/report_TWOLOOP_hr_regular_120.txt

@@ -1,0 +1,20 @@
+target = bankaccount.BankAccountDriverSequences
+
+classpath = ${jpf-memoise}/build/examples
+
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method = bankaccount.BankAccount.deposit(sym),bankaccount.BankAccount.withdraw(sym)
+
+coverage.include=*.BankAccount
+coverage.show_methods=true
+coverage.show_bodies=true
+
+symbolic.minint=-100
+
+symbolic.maxint=100
+
+#search.class = .search.heuristic.BFSHeuristic
+
+listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true

@@ -1,0 +1,10 @@
+target=Ex
+
+classpath = /Users/gyang/workspaces/memoise-workspace/jpf-memoise/version0
+
+search.depth_limit=5
+symbolic.method=Ex.m(sym#sym#sym)
+
+listener=gov.nasa.jpf.memoise.listener.SolverCallListener
+
+memoise.new_trie_name=trie_init.dat

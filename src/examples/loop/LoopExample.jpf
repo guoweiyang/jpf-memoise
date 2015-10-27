@@ -1,0 +1,12 @@
+target=loop.LoopExample
+
+classpath = ${jpf-memoise}/build/examples
+
+sourcepath = ${jpf-memoise}/src/examples
+
+symbolic.method= loop.LoopExample.test(sym)
+
+
+listener = gov.nasa.jpf.symbc.SymbolicListener
+
+vm.storage.class=nil
