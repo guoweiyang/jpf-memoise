@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="build/examples" path="src/examples"/>
+	<classpathentry kind="src" output="build/main" path="src/main"/>
+	<classpathentry kind="lib" path="lib/jpf-memoise-graph.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/antlr-runtime-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/trove.jar"/>
+	<classpathentry kind="lib" path="lib/foundry-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-actor-classes.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-actor-examples.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-actor.jar"/>
+	<classpathentry kind="lib" path="lib/JSAP-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/UMLStateMachines.jar"/>
+	<classpathentry kind="lib" path="lib/bcel-5.2.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-annotations.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-classes.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-core.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc-annotations.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc-classes.jar"/>
+	<classpathentry kind="lib" path="lib/jpf-symbc.jar"/>
+	<classpathentry kind="lib" path="lib/jpf.jar"/>
+	<classpathentry kind="lib" path="lib/RunAnt.jar"/>
+	<classpathentry kind="lib" path="lib/RunJPF.jar"/>
+	<classpathentry kind="lib" path="lib/RunTest.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>
